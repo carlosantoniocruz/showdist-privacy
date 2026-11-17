@@ -9,15 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-  /* The app's theme (Showdist v1.4): true black, white and light grey text, one sandstone accent. */
+  /* The app's theme (Showdist v1.5): true black, white and light grey text, one cyan accent, hairline dividers. */
   :root {
     --bg: #000000;
     --surface: #121212;
     --text: #FFFFFF;
     --muted: #B8B8B8;
     --hint: #8A8A8A;
-    --sandstone: #C8A97E;
-    --divider: rgba(200, 169, 126, 0.35);
+    --accent: #00E5FF;
+    --divider: rgba(255, 255, 255, 0.16);
   }
   html { background: var(--bg); }
   body {
@@ -31,8 +31,8 @@
     -webkit-text-size-adjust: 100%;
   }
   header { display: flex; align-items: center; gap: 0.9rem; margin: 0 0 1.75rem; }
-  header svg { flex: none; width: 56px; height: 24px; }
-  .wordmark { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.18em; color: var(--sandstone); }
+  header svg { flex: none; width: 52px; height: 26px; }
+  .wordmark { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.18em; color: var(--text); }
   h1 { font-size: 1.45rem; font-weight: 400; margin: 0 0 0.35rem; line-height: 1.3; }
   .date { color: var(--hint); font-size: 0.85rem; margin: 0 0 1.75rem; }
   hr { border: 0; border-top: 1px solid var(--divider); margin: 0 0 2rem; }
@@ -42,7 +42,7 @@
   }
   p { margin: 0 0 1rem; color: var(--text); }
   .muted { color: var(--muted); }
-  a { color: var(--sandstone); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
   a:hover, a:focus-visible { color: var(--text); }
   footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--divider); color: var(--hint); font-size: 0.8rem; }
   @media (max-width: 420px) {
@@ -53,29 +53,29 @@
 </head>
 <body>
 <header>
-  <!-- The app icon's mark: a sandstone rule between two end ticks, a white point on each end. -->
-  <svg viewBox="0 0 56 24" aria-hidden="true">
-    <path d="M8 12 H48 M8 3 V21 M48 3 V21" stroke="#C8A97E" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <circle cx="8" cy="12" r="4.5" fill="#FFFFFF"/>
-    <circle cx="48" cy="12" r="4.5" fill="#FFFFFF"/>
+  <!-- The app icon's mark (ic_launcher_foreground.xml): a cyan rule between two end ticks, a white point on each tick. -->
+  <svg viewBox="0 0 52 26" aria-hidden="true">
+    <path d="M6 13 H46 M6 2 V24 M46 2 V24" stroke="#00E5FF" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="6" cy="13" r="6" fill="#FFFFFF"/>
+    <circle cx="46" cy="13" r="6" fill="#FFFFFF"/>
   </svg>
   <p class="wordmark">SHOWDIST</p>
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="date">Effective date: 4 November 2026</p>
+<p class="date">Effective date: 16 November 2026</p>
 <hr>
 
 <p>Showdist ("the app") is developed by Carlos Cruz. This policy explains what the app does with your information.</p>
 
 <h2>Information the app uses</h2>
-<p>The app uses your device's camera to show the augmented-reality view and to measure distances, and its motion sensors for the levels. Camera images and sensor readings are processed on your device in real time. The app does not record, save or transmit photos, video or sensor data.</p>
+<p>The app uses your device's camera to show the augmented-reality view and to measure distances (on phones that support it, ARCore also estimates depth from the camera so points can lock on plain walls), and its motion sensors for the levels and to pause the camera when the phone sits idle. Camera images, depth and sensor readings are processed on your device in real time. The app does not record, save or transmit photos, video, depth or sensor data.</p>
 
 <h2>Measurements you save</h2>
-<p>Measurements you choose to save (their points, lengths, date and unit, and any group or line names you give them) are stored only in the app's private storage on your device, as are your settings and calibration values. They are never uploaded by the app. They are deleted when you delete them in the app, clear the app's data or uninstall it. If you export a PDF or share a measurement as text, it goes only to the app or person you choose in Android's share sheet.</p>
+<p>Measurements you choose to save (their points, lengths, date and unit, and any names, labels or Length, Width and Height tags you give them) are stored only in the app's private storage on your device, as are your settings and calibration values. They are never uploaded by the app. They are deleted when you delete them in the app, clear the app's data or uninstall it. If you export a PDF or share a measurement as text, it goes only to the app or person you choose in Android's share sheet.</p>
 
 <h2>No accounts, ads or analytics</h2>
-<p>The app has no sign-in, shows no ads, and contains no analytics or tracking code. The developer does not collect, sell or share any personal information.</p>
+<p>The app has no sign-in, shows no ads, and contains no analytics or tracking code. It has no network code of its own: the internet permission Android lists for it comes from the ARCore libraries. The developer does not collect, sell or share any personal information.</p>
 
 <h2>Google Play Services for AR</h2>
 <p>This application runs on Google Play Services for AR (ARCore), which is provided by Google LLC and governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
